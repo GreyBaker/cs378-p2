@@ -1,5 +1,6 @@
 import './App.css';
 import MenuItem from './components/MenuItem';
+import Header from './components/Header'
 
 // import 'bootstrap/dist/css/bootstrap.min.css'; // This imports bootstrap css styles. You can use bootstrap or your own classes by using the className attribute in your elements.
 
@@ -82,11 +83,7 @@ const menuItems = [
 function App() {
   return (
     <div>
-      <div class="text-center" id="logo-info">
-        <img src="https://www.oscampuscafe.com/wp-content/uploads/2019/11/os-campus-cafe-logo-2x.png" alt="O's Campus Cafe" id="logo" />
-        <p id="subtitle">UT's Premier Sit-Down Cafe</p>
-        <p id="orange-cursive">Food From Home, Moments Away</p>
-    </div>
+      <Header logo_img="https://www.oscampuscafe.com/wp-content/uploads/2019/11/os-campus-cafe-logo-2x.png" logo_img_alt="O's Campus Cafe" subtitle="UT's Premier Sit-Down Cafe" under_subtitle="Food From Home, Moments Away"/>
       <div className="menu">
         {/* Display menu items dynamicaly here by iterating over the provided menuItems */}
         {Object.keys(menuItems).map(key => <MenuItem key={menuItems[key].id} title={menuItems[key].title} content={menuItems[key].description} image_path={"./images/" + menuItems[key].imageName } price={menuItems[key].price} />)}
