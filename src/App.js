@@ -82,10 +82,15 @@ const menuItems = [
 function App() {
   return (
     <div>
-      <h1>Menu</h1>
+      <div class="text-center" id="logo-info">
+        <img src="https://www.oscampuscafe.com/wp-content/uploads/2019/11/os-campus-cafe-logo-2x.png" alt="O's Campus Cafe" id="logo" />
+        <p id="subtitle">UT's Premier Sit-Down Cafe</p>
+        <p id="orange-cursive">Food From Home, Moments Away</p>
+    </div>
       <div className="menu">
         {/* Display menu items dynamicaly here by iterating over the provided menuItems */}
-        <MenuItem title={menuItems[0].title} /> {/* Example for how to use a component */}
+        {Object.keys(menuItems).map(key => <MenuItem key={menuItems[key].id} title={menuItems[key].title} content={menuItems[key].description} image_path={"/images/" + menuItems[key].imageName } price={menuItems[key].price} />)}
+        
       </div>
     </div>
   );
