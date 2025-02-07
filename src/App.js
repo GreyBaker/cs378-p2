@@ -89,7 +89,7 @@ function App() {
     </div>
       <div className="menu">
         {/* Display menu items dynamicaly here by iterating over the provided menuItems */}
-        {Object.keys(menuItems).map(key => <MenuItem key={menuItems[key].id} title={menuItems[key].title} content={menuItems[key].description} image_path={"./cs378-p2/images/" + menuItems[key].imageName } price={menuItems[key].price} />)}
+        {Object.keys(menuItems).map(key => <MenuItem key={menuItems[key].id} title={menuItems[key].title} content={menuItems[key].description} image_path={"./images/" + menuItems[key].imageName } price={menuItems[key].price} />)}
         
       </div>
     </div>
